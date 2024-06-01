@@ -4,22 +4,35 @@
   padding: 0;
 }
 
+/* Estilos del Navbar */
+
 .container {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 10px 0;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 0.5rem;
+  z-index: 1000;
 }
 
 header {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px 0; 
 }
 
 header div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
 }
 
 h1 {
@@ -41,19 +54,44 @@ nav ul li a {
   text-decoration: none;
 }
 
+/* Estilos de las secciones */
 .section {
-  padding: 50px 0;
+  padding: 5rem 1rem;
+  margin-top: 5%;
+  height: 100vh;
+}
+
+.about-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.about-container div{
+  flex: 1 1 40%;
+}
+
+#container-img{
+  border-radius: 1rem;
+}
+
+.container h2{
+  margin-bottom: 1rem ;
 }
 
 .portfolio-items {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .portfolio-item {
   margin: 10px;
   margin-bottom: 40px;
-  width: 50%;
+  width: 40%;
+  background-color: #bbbbbb;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .portfolio-item img {
@@ -63,6 +101,16 @@ nav ul li a {
 
 .portfolio-item:hover img:hover {
   opacity: 100%;
+}
+
+.portfolio-item h3,
+.portfolio-item p {
+  padding: 0.5rem;
+}
+
+img{
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
 }
 
 form {
@@ -99,4 +147,38 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+/* Estilos del Footer */
+
+footer{
+  background-color:#555;
+  text-align: center;
+}
+
+.container p{
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1014px) {
+  .about-container{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+}
+
+@media screen and (max-width: 813px) {
+  .portfolio-items{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 506px) {
+  nav ul li{
+    display: block;
+  }
 }
