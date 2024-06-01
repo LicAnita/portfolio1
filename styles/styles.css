@@ -153,8 +153,32 @@ button:hover {
 
 footer{
   background-color:#555;
+  text-align: center;
 }
 
 .container p{
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 1014px) {
+  .about-container{
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+}
+
+@media screen and (max-width: 813px) {
+  .portfolio-items{
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+}
+
+@media screen and (max-width: 506px) {
+  nav ul li{
+    display: block;
+  }
 }
